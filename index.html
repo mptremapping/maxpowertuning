@@ -1,0 +1,268 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAX POWER TUNING | MOBILE Performance Specialist</title>
+    
+    <link href="https://fonts.cdnfonts.com/css/madison-square-nf" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,400;0,700;0,900;1,700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --black: #050505; --dark-grey: #111111; --mid-grey: #1a1a1a;
+            --silver: #c0c0c0; --light-silver: #e0e0e0; --red: #ff0000;
+            --white: #ffffff; --radius-lg: 20px;
+        }
+
+        body { font-family: 'Exo 2', sans-serif; background-color: var(--black); color: var(--light-silver); margin: 0; scroll-behavior: smooth; overflow-x: hidden; }
+        
+        .brand-font { 
+            font-family: 'Madison Square NF', sans-serif; 
+            text-transform: uppercase; 
+            font-weight: 400 !important; 
+            letter-spacing: 1px;
+            font-style: normal !important;
+        }
+
+        .brand-font span { color: var(--red); }
+
+        h1, h2, h3 { font-style: italic; font-weight: 900; letter-spacing: -1px; color: var(--white); }
+
+        header { background: rgba(18, 18, 18, 0.95); padding: 1rem 5%; display: flex; justify-content: space-between; align-items: center; border-bottom: 3px solid var(--red); position: sticky; top: 0; z-index: 1000; backdrop-filter: blur(10px); }
+        .logo { font-size: 2.2rem; color: var(--silver); display: flex; align-items: center; }
+        
+        nav a { color: var(--silver); text-decoration: none; font-weight: 700; margin: 0 15px; font-size: 0.85rem; text-transform: uppercase; font-style: italic; transition: 0.3s; }
+        nav a:hover { color: var(--red); transform: skewX(-10deg); }
+        
+        .hero { padding: 120px 5%; text-align: center; background: linear-gradient(0deg, var(--black) 0%, #151515 100%); }
+
+        .section-container { padding: 80px 5%; display: none; border-bottom: 1px solid #1a1a1a; }
+        .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+        .card { background: var(--dark-grey); padding: 2rem; border-radius: var(--radius-lg); border-left: 2px solid #333; transition: 0.3s; height: 100%; box-sizing: border-box; }
+        .card:hover { border-left-color: var(--red); background: #181818; }
+        
+        .btn-red { background: var(--red); color: white; border: none; padding: 18px 45px; border-radius: 10px; font-size: 1.2rem; font-weight: 900; font-style: italic; cursor: pointer; text-transform: uppercase; transition: 0.3s; box-shadow: 0 10px 20px rgba(255,0,0,0.2); }
+        .btn-red:hover { background: #fff; color: var(--red); transform: translateY(-3px); }
+
+        .cta-card { background: var(--mid-grey); padding: 3.5rem; border-radius: var(--radius-lg); max-width: 850px; margin: -60px auto 60px auto; border: 1px solid #333; box-shadow: 0 20px 50px rgba(0,0,0,0.9); text-align: center; }
+
+        /* Slideshow Specific Styles */
+        .slideshow-wrap { max-width: 800px; margin: 0 auto; position: relative; border-radius: 15px; overflow: hidden; border: 2px solid #333; height: 400px; box-shadow: 0 10px 30px rgba(255,0,0,0.1); }
+        .slideshow-img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-size: cover; background-position: center; opacity: 0; transition: opacity 1s ease-in-out; }
+        .slideshow-img.active { opacity: 1; }
+
+        .card-img { width: 100%; height: 200px; object-fit: cover; border-radius: 10px; margin-bottom: 15px; border: 1px solid #333; }
+
+        .disclaimer-box { max-width: 900px; margin: 40px auto; background: #080808; border: 1px solid #222; border-radius: 15px; padding: 25px; text-align: left; border-left: 4px solid var(--red); }
+        .disclaimer-box h4 { color: var(--red); margin-top: 0; font-style: italic; text-transform: uppercase; letter-spacing: 1px; }
+        .terms-text { font-size: 0.85rem; color: #bbb; line-height: 1.6; max-height: 250px; overflow-y: auto; padding-right: 10px; }
+        .terms-text::-webkit-scrollbar { width: 5px; }
+        .terms-text::-webkit-scrollbar-track { background: #111; }
+        .terms-text::-webkit-scrollbar-thumb { background: var(--red); }
+
+        footer { padding: 60px 5%; text-align: center; border-top: 4px solid var(--red); background: #000; }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo brand-font"><span>M</span>AX&nbsp;<span>P</span>OWER&nbsp;<span>T</span>UNING</div>
+    <nav id="main-nav"></nav>
+</header>
+
+<section id="home" class="hero">
+    <h1 class="brand-font" style="font-size: clamp(3rem, 10vw, 6.5rem); margin: 0; color: var(--silver);"><span>M</span>AX <span>P</span>OWER <span>T</span>UNING</h1>
+    <p style="font-size: 1.4rem; font-style: italic; color: var(--silver); margin-top: 15px; letter-spacing: 1px;">Mobile Vehicle Performance Specialist</p>
+</section>
+
+<div class="cta-card">
+    <h2 style="margin-top:0; font-size: 2.2rem;">READY FOR MAXIMUM GAINS?</h2>
+    <p style="color: var(--silver); margin-bottom: 25px; font-size: 1.1rem;">Get a custom quote for your vehicle in minutes via WhatsApp.</p>
+    <button class="btn-red" onclick="openWhatsApp('Quote Request')">GET A QUOTE NOW</button>
+</div>
+
+<section id="problem-solver" class="section-container"></section>
+<section id="coverage" class="section-container"></section>
+<section id="process" class="section-container"></section>
+<section id="slideshow" class="section-container"></section>
+<section id="pricing" class="section-container"></section>
+<section id="faq" class="section-container"></section>
+
+<footer>
+    <div class="logo brand-font" style="justify-content: center; margin-bottom: 20px;"><span>M</span>AX&nbsp;<span>P</span>OWER&nbsp;<span>T</span>UNING</div>
+    
+    <div class="disclaimer-box">
+        <h4>TERMS & CONDITIONS OF SERVICE</h4>
+        <div class="terms-text">
+            <p><strong>1. SOFTWARE & REFUND POLICY</strong><br>
+            Max Power Tuning provides custom ECU calibrations. Due to the digital nature of our products, <strong>we do not offer refunds</strong>. If you encounter an issue, we will work to rectify it via software adjustments. A refund will only be considered if a verifiable fault exists within our software that our engineers cannot fix after reasonable attempts. Change of mind or external mechanical issues do not qualify for a refund.</p>
+
+            <p><strong>2. EMISSIONS & LEGALITY (OFF-ROAD USE ONLY)</strong><br>
+            Any modifications involving the tampering, bypassing, or removal of emissions control systems—including but not limited to <strong>DPF, EGR, AdBlue, and Catalytic Converters (Decat)</strong>—are strictly for <strong>Off-Road, Track, or Show Use Only</strong>. These modifications render the vehicle illegal for use on public highways in the UK. By proceeding, the customer accepts full legal responsibility and acknowledges the vehicle may fail an MOT inspection.</p>
+
+            <p><strong>3. MECHANICAL CONDITION & LIABILITY</strong><br>
+            It is the customer's sole responsibility to ensure the vehicle is in sound mechanical condition. Remapping can increase stress on engine components. Max Power Tuning is <strong>not liable</strong> for the failure of any mechanical parts following a remap, including but not limited to: turbos, injectors, clutches, dual-mass flywheels (DMF), and engine internals. We recommend more frequent servicing intervals following a performance upgrade.</p>
+
+            <p><strong>4. MANUFACTURER WARRANTY & INSURANCE</strong><br>
+            ECU remapping may void your manufacturer’s warranty. It is the customer’s responsibility to inform their insurance provider of any performance modifications. Max Power Tuning accepts no liability for voided warranties or insurance claims denied due to undisclosed modifications.</p>
+
+            <p><strong>5. AFTERCARE & REVERSIONS</strong><br>
+            If a main dealer overwrites our software during a service, we can tune the vehicle again, however this will incur a charge, as the vehicle will now be running a newer, different software version than what we previosuly tuned. We can return the vehicle to stock at any time at a charge, however, the original service fee remains non-refundable.</p>
+        </div>
+    </div>
+
+    <p id="footer-text"></p>
+</footer>
+
+<script>
+const CONFIG = {
+    whatsappNumber: "447986317424",
+    established: "2016",
+    
+    photos: {
+        stage1: "images/stage1.jpg", 
+        stage2: "images/stage2.jpg",
+        gearbox: "images/gearbox.jpg",
+        carbon: "images/carbon.jpg",
+        diag: "images/diag.jpg"
+    },
+
+    // SLIDESHOW CONFIGURATION
+    slideshow: {
+        folder: "slideshowimages/",
+        // NOTE FOR THE FUTURE: Add your filenames here as you upload them to the folder
+        images: ["1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg", "6.jpg", "7.jpg", "8.jpg", "9.jpg", "10.jpg"],
+        interval: 4000 // Time per slide in milliseconds (1000 = 1 seconds)
+    },
+
+    // NOTE: Changed 'powerSlider' to 'dynamicSlideshow'
+    features: {
+        problemSolver: true,
+        coverage: true,
+        process: true,
+        dynamicSlideshow: true, 
+        pricing: true,
+        faq: true
+    },
+
+    problems: [
+        { title: "Sluggish Engine - Carbon Clean", icon: "🐌", service: "Carbon Clean" },
+        { title: "Flat Spots - Stage 1 remap", icon: "📈", service: "Stage 1 Remap" },
+        { title: "Poor Fuel Economy - Eco Remap", icon: "⛽", service: "Eco Tune" }
+    ],
+    areas: ["Swindon", "Bath", "Oxford", "Reading", "Gloucester", "Southampton", "Bristol", "And More!"],
+    steps: [
+        { t: "Pre-Scan", d: "Full dealer-level diagnostics to ensure engine health." },
+        { t: "Calibration", d: "Custom software tailored to your specific vehicle." },
+        { t: "Validation", d: "Post-tune logging and road test where applicable to confirm power and safety." }
+    ],
+    products: [
+        { name: "Stage 1", price: "£200+", req: "No hardware required", img: "stage1" },
+        { name: "Stage 2", price: "£250+", req: "Hardware mods required", img: "stage2" },
+        { name: "TCU Tune", price: "£200+", req: "Gearbox optimization", img: "gearbox" },
+        { name: "Carbon Clean", price: "£70+", req: "Restore lost efficiency & power", img: "carbon" },
+        { name: "Diagnostics", price: "£60+", req: "Dealer level fault finding", img: "diag" }
+    ],
+    faqs: [
+         { 
+            q: "Will it void warranty?", 
+            a: "Most software is stealth, but we recommend full disclosure to your provider." 
+        },
+        { 
+            q: "Is it reversible?", 
+            a: "Yes, we can flash the vehicle back to stock at any time." 
+        },
+        { 
+            q: "What is remapping?", 
+            a: "Modifying the software in your car's ECU to enhance performance, throttle response, and MPG." 
+        },
+        { 
+            q: "Is it safe?", 
+            a: "Yes, when performed by professionals, remapping is a safe way to improve performance." 
+        },
+        { 
+            q: "How long does it take?", 
+            a: "The duration varies, but on average, it takes around 1-2 hours." 
+        }
+    ]
+};
+
+function init() {
+    const nav = document.getElementById('main-nav');
+    nav.innerHTML = `<a href="#home">Home</a>`;
+    if(CONFIG.features.pricing) nav.innerHTML += `<a href="#pricing">Pricing</a>`;
+    if(CONFIG.features.faq) nav.innerHTML += `<a href="#faq">FAQ</a>`;
+    nav.innerHTML += `<a href="javascript:void(0)" onclick="openWhatsApp()" style="color: var(--red);">Book Now</a>`;
+
+    document.getElementById('footer-text').innerText = `ESTABLISHED ${CONFIG.established} | MOBILE TUNING SPECIALISTS`;
+
+    if(CONFIG.features.problemSolver) {
+        const s = document.getElementById('problem-solver'); s.style.display = 'block';
+        s.innerHTML = `<h2 style="text-align:center">CAR FEELING OFF?</h2><div class="grid-3"></div>`;
+        CONFIG.problems.forEach(p => {
+            s.querySelector('.grid-3').innerHTML += `<div class="card" onclick="openWhatsApp('${p.service}')" style="cursor:pointer; text-align:center"><h1>${p.icon}</h1><h3>${p.title}</h3><p>Select to fix</p></div>`;
+        });
+    }
+
+    if(CONFIG.features.coverage) {
+        const s = document.getElementById('coverage'); s.style.display = 'block'; s.style.background = '#080808';
+        s.innerHTML = `<h2 style="text-align:center">SERVICE AREA</h2><p style="text-align:center; font-size:1.2rem; font-style:italic; color:var(--red)">${CONFIG.areas.join(' • ')}</p>`;
+    }
+
+    if(CONFIG.features.process) {
+        const s = document.getElementById('process'); s.style.display = 'block';
+        s.innerHTML = `<h2 style="text-align:center">THE 3-STEP PROCESS</h2><div class="grid-3"></div>`;
+        CONFIG.steps.forEach((step, i) => {
+            s.querySelector('.grid-3').innerHTML += `<div class="card"><h1 style="color:var(--red); margin:0">0${i+1}</h1><h3>${step.t}</h3><p>${step.d}</p></div>`;
+        });
+    }
+
+    // NEW DYNAMIC SLIDESHOW INITIATION
+    if(CONFIG.features.dynamicSlideshow && CONFIG.slideshow.images.length > 0) {
+        const s = document.getElementById('slideshow'); s.style.display = 'block'; s.style.background = '#080808';
+        s.innerHTML = `<h2 style="text-align:center">RECENT TUNES</h2><div class="slideshow-wrap" id="slideshow-container"></div>`;
+        
+        const container = document.getElementById('slideshow-container');
+        CONFIG.slideshow.images.forEach((img, i) => {
+            const imgPath = CONFIG.slideshow.folder + img;
+            container.innerHTML += `<div class="slideshow-img ${i === 0 ? 'active' : ''}" style="background-image:url('${imgPath}')" onerror="this.style.display='none'"></div>`;
+        });
+
+        // Start Slideshow Logic if more than one image exists
+        if(CONFIG.slideshow.images.length > 1) {
+            let currentSlide = 0;
+            const slides = document.querySelectorAll('.slideshow-img');
+            setInterval(() => {
+                slides[currentSlide].classList.remove('active');
+                currentSlide = (currentSlide + 1) % slides.length;
+                slides[currentSlide].classList.add('active');
+            }, CONFIG.slideshow.interval);
+        }
+    }
+
+    if(CONFIG.features.pricing) {
+        const s = document.getElementById('pricing'); s.style.display = 'block';
+        s.innerHTML = `<h2 style="text-align:center">PRODUCTS & PRICING</h2><div class="grid-3"></div>`;
+        CONFIG.products.forEach(p => {
+            s.querySelector('.grid-3').innerHTML += `<div class="card"><img src="${CONFIG.photos[p.img]}" class="card-img" onerror="this.style.display='none'"><h3>${p.name}</h3><h1 style="color:var(--red); margin:0">${p.price}</h1><p>${p.req}</p><button class="btn-red" style="width:100%" onclick="openWhatsApp('${p.name}')">Enquire</button></div>`;
+        });
+    }
+
+    if(CONFIG.features.faq) {
+        const s = document.getElementById('faq'); s.style.display = 'block'; s.style.background = '#080808';
+        s.innerHTML = `<h2 style="text-align:center">FREQUENT QUESTIONS</h2><div class="grid-3"></div>`;
+        CONFIG.faqs.forEach(f => {
+            s.querySelector('.grid-3').innerHTML += `<div class="card"><h3>${f.q}</h3><p>${f.a}</p></div>`;
+        });
+    }
+}
+
+function openWhatsApp(service = "General Inquiry") {
+    const template = `Hi MAX POWER TUNING,\n\nI'm interested in: ${service}\nRegistration: \nLocation: \n\nI'd like to get a quote please.`;
+    window.open(`https://wa.me/${CONFIG.whatsappNumber}?text=${encodeURIComponent(template)}`, '_blank');
+}
+
+init();
+</script>
+</body>
+</html>
